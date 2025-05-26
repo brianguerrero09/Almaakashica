@@ -2,14 +2,35 @@
     margin: 0;
     padding: 0;
     box-sizing: border-box;
+    font-family: sans-serif;
 }
-  
+
+body{
+    background-color: #D6CC99;
+}
+
+/* Encabezado: logo, nombre empresa, barra de navegación*/
 .header-container {
     padding: 20px;
+    height: 80px;
     display: flex;
     justify-content: space-between;
     text-align: center;
-    border-bottom: 1px solid #000;
+    background-color: #445D48;
+    color: #FDE5D4;
+    position: relative;
+    z-index: 1;
+}
+
+.header-container::after {
+  content: "";
+  position: absolute;
+  bottom: -10px;
+  left: 0;
+  width: 100%;
+  height: 10px;
+  background: linear-gradient(to bottom, #445D48, #D6CC99);
+  z-index: -1;
 }
   
 .logo {
@@ -21,6 +42,31 @@
     display: flex;  
 }
   
-.header-container li {
+.nav-links li {
     margin: 10px;
+    list-style-type: none;
+    
+}
+
+.nav-links a {
+    text-decoration: none;
+    color: inherit;
+    font-weight: 600;
+    padding: 10px;
+    border-radius: 10px;
+    transition: box-shadow 0.2s ease;
+}
+
+
+/* Sombra para botones al posicionarse encima*/
+.nav-links a:hover {
+    box-shadow: 1px 1px 0px #000F,
+                2px 2px 0px #000A,
+                3px 3px 0px #0007,
+                4px 4px 0px #0004,
+                5px 5px 0px #0002;
+}
+
+main {
+    margin: 30px;
 }
