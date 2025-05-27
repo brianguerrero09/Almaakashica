@@ -1,3 +1,5 @@
+@import url('https://fonts.googleapis.com/css2?family=Allura&family=Open+Sans:ital,wght@0,300..800;1,300..800&display=swap');
+
 * {
     margin: 0;
     padding: 0;
@@ -11,9 +13,9 @@ body{
 
 /* Encabezado: logo, nombre empresa, barra de navegación*/
 .header-container {
-    padding: 20px;
+    padding: 10px;
     box-sizing: content-box;
-    height: 60px;
+    height: 5vh;
     display: flex;
     justify-content: space-between;
     text-align: center;
@@ -25,9 +27,8 @@ body{
 
 
   
-.logo {
-    display: flex;
-    margin: 5px;
+.logo h1{
+    font-family: "Allura", cursive;
 }
 
 .nav-links {
@@ -36,15 +37,17 @@ body{
   
 .nav-links li {
     font-size: 24px;
-    margin: 10px;
+    margin: 0 10px;
     list-style-type: none;
     
 }
 
 .nav-links a {
+    font-family: 'Open Sans', sans-serif;
+    font-weight: 400;
+    font-size: 20px;
     text-decoration: none;
     color: inherit;
-    font-weight: 600;
     padding: 10px;
     border-radius: 10px;
     transition: box-shadow 0.2s ease;
@@ -70,9 +73,7 @@ body{
                 5px 5px 0px #0002;
 }
 
-main {
-    margin-top: 0px;
-}
+
 
 /* Modelando la imagen de portada */
 
@@ -80,21 +81,20 @@ main {
     position: relative;
     margin: 0 auto;
     width: 100%;
-    height: calc(100vh - 80px);
+    height: 95vh;
 }
 
 .img-marca {
-    width: 1000px;
+    width: 95vh;
     height: auto;
     display: block;
     margin: 0 auto;
     animation: spin 60s linear infinite;
-    left: 25%;
     z-index: 1;
 }
 
 .img-titulo {
-    width: 500px;
+    width: 47vh;
     height: auto;
     position: absolute;
     top: 53%;
@@ -109,3 +109,15 @@ main {
     from   { transform: rotate(0deg); }
     to     { transform: rotate(360deg); }
   }
+
+/* Modelando el main */
+
+main {
+    margin-top: 0px;
+    font-family: "allura";
+}
+
+.contenedor-informacion {
+    margin: 20px auto;
+    width: 500px;
+}
